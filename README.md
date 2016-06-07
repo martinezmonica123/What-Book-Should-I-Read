@@ -1,5 +1,5 @@
 
-# What Should I Read (working title)
+# What Book Should I Read?
 
 ## Overview
 
@@ -56,7 +56,6 @@ var Library = new mongoose.Schema({
 ![Main Page](documentation/MainPage-About.png)
 ![User Library](documentation/UserLibrary-UserInput.png)
 ![Suggestions](documentation/Suggestions-Output.png)
-![Editors Pick](documentation/Editors-Pick.png)
 
 ## Sitemap
 ![Sitemap](documentation/Sitemap-Basic.png)
@@ -68,21 +67,9 @@ var Library = new mongoose.Schema({
 * As a user, I want a more personal book recommendaion so that I can figure out what to read.
 * As an admin-user, I want to populate the site database so that I can provide a curated book list.
 
-## Reserach Topics
+## Technologies
 
-* (3 points) Integrate user authentication
-    * I'm going to be using Passport for user authentication
-    * User authentication is used grant access/permission to certain users by matching their inputted credentials with those existing in a database
-    * Passport...authenticates requests (based on app authentication requirements) while delegating all other functionality to the application.
-* (3 points)  Automated functional testing 
-    * I'm going to be looking into Selenium, Mocha, and Chai as references in this <a href="http://bites.goodeggs.com/posts/selenium-webdriver-nodejs-tutorial/">tutorial</a>
-    * Selenium is a suite of tools used to automate web browers across various platforms.
-* (1 points) Use a CSS framework throughout your site
-    * I will be using Bootstrap
-    * CSS frameworks provide generic css functionality to make web-design easier more and more standards-compliant
-    * Bootstrap is a popular front-end framework used for faster and easier web development.
-* (2 points) external API (maybe)
-    * I might use GoodReads api (more research has to be done on how to integrate to project goals.)
-    * External apis (application programming interfaces) are essentially libraries that allow for applications to integrate functionalities
-    * GoodReads API provides access to their book and user database which would facilitate the presentation aspect of the recommendation.
+* Integrate user authentication using Passport 
+* CSS framework - Bootstrap
+* Google Books API
 
