@@ -1,0 +1,36 @@
+<div class="container">
+    <div id="box-wrap" style="padding:30px;background-color:azure;">
+    {{#if guest}}
+        <h1> Hi {{guest}},
+            <br>
+            What have you read so far...</h1>
+            <br>
+    {{else}}
+        <br>
+        <h1> What have you read so far...</h1>
+        <br>
+    {{/if}}
+    </div>
+</div>
+<div><br></div>
+<div id="box">
+    <div class="container-fluid highlight"style="background-color:aliceblue;" >
+        {{#defaultLib}}
+        <form role="form" method="POST" action="/default-library">
+            <div style='text-align:left;display:inline-block;'>
+            {{#each books}}
+            <div class="checkbox">
+                    <input type="checkbox" name="userBooks" value={{_id}}> 
+                    <label><strong>{{title}}</strong> by {{author}} </label>
+            </div>
+            {{/each}}
+            </div>
+            <div style='text-align:center'>
+                <br>
+                <input type="submit" value="Finished">
+            </div>
+            <br>
+        </form>
+    {{/defaultLib}}
+    </div>
+</div>

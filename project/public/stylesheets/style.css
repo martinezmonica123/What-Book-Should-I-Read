@@ -1,0 +1,77 @@
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.container {
+    padding-top: 10px;
+}
+
+body {
+    color:darkslategray;
+    padding: 20px;
+    font: 16px 'Open Sans', serif;
+    text-align: center;
+    background:url('../images/shelf1.jpg');
+    font-weight: bold;
+}
+
+a {
+    color:brown;
+}
+
+#box-wrap {
+    border-radius: 3px;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.6);
+    padding-bottom: 20px;
+}
+
+
+#box {
+    
+    border-radius: 3px;
+    padding: 30px;
+    padding-bottom: 20px;
+    width: 50%;
+    display: inline-block;
+    font: 'sans-serif';
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.5);
+}
+
+.input-form {
+    margin-top: 50px;
+
+}
+
+.content {
+    text-align: center;
+}
+.highlight {
+	background-color:rgba(204, 204, 204, 0.6);
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    margin: 0 auto;
+    width:80%;
+}
+.col-fixed {
+    /* custom width */
+    width:420px;
+}
+.resize{
+    width:700px; /* you can use % */
+    height: auto;
+    max-height: 300px;
+}
+
+
+input[type=submit] {
+    background-color:white;
+    color: black;
+}

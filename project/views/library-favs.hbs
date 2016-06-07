@@ -1,0 +1,24 @@
+<div class="container">
+    <div id="box-wrap" style="padding:30px;background-color:azure;">
+        <h2>Which one of these is your favorite ?</h2>
+    </div>
+</div>
+<div id="box">
+    <div class="container-fluid highlight"style="background-color:aliceblue;" >
+        <form role="form" method="POST" action="/results">
+            <div style='text-align:left;display:inline-block;'>
+            {{#each books}}
+            <div class="checkbox">
+                <input type="checkbox" name="favorite" value={{IDNum}}> 
+                <label><strong>{{title}} </strong> by {{author}} </label>
+            </div>
+            {{/each}}
+            </div>
+             <div style='text-align:center'>
+                <br>
+                <input type="submit" value="Finished">
+            </div>
+            <br>
+        </form>
+    </div>
+</div>

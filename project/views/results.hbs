@@ -1,0 +1,18 @@
+<div class="container">
+    <div id="box-wrap" style="padding:30px;background-color:azure;">
+        <h3>You should try reading this book!</h3>
+    </div>
+</div>
+<div id='box'>
+    <div class="container-fluid" style="background-color:aliceblue;">
+        <br>
+        {{#results}}
+            <h3><a href= '{{this.link}}' >{{this.title}}</a></h3>
+            <h3> by </h3>
+            <h3>{{this.authors}} </h3>
+            <img src="{{this.thumbnail}}">
+            <br><br>  
+            <p>{{this.description}}</p><br>
+        {{/results}}
+    </div>
+</div>

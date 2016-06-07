@@ -1,0 +1,41 @@
+<script src="/javascripts/library.js"></script>
+<div class="container">
+    <div id="box-wrap" style="padding:30px;">
+        <br>
+        {{#if user}}
+        <h1> Welcome {{user}} !</h1>
+        <a href="/logout"> Logout </a>
+        {{/if}}  
+    </div>
+</div>
+<div><br></div>
+
+<div id="box">
+    <div class="container-fluid" >
+        <div style="text-align:center;">
+        <h2 style="text-align: center;">Your Libraries:</h2>
+        <ul id='lib-all-list' class="list-group">
+            </ul>
+        </div> 
+                <div><br></div>
+        <div>
+            <h3> Create a New Library</h3>
+            <br>
+        </div>
+        <form id="create-form" method="POST" action="">
+        <div style="text-align:center;">
+            <label for="libName">Library Name</label><br>
+            <input type="text" name="libName" id="libName">
+        </div>                         
+        <div style="text-align:center;">
+            <br>
+            <input type="hidden" name="slugLib" value={{slug}}>
+            <input type="submit" name="addLibBtn" id="addLibBtn" value="submit">
+        </div>
+        </form>
+    </div>
+</div>
+
+
+        
+    

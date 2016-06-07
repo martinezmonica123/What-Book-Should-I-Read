@@ -1,0 +1,139 @@
+<script src="/javascripts/books.js"></script>
+
+<div>    
+    {{#if user}}
+    <h1> {{user}} - Library </h1>
+    {{/if}}   
+</div>
+
+
+<h2> <a href="/logout"> Logout </a></h2>
+
+<div class="container">
+    <div class="row ">
+        <div class="col-xs-4">
+            <div class="col-xs-12"id="box-wrap">
+                <br><h3 >Library Books</h3><br>
+                <div class="highlight">
+                    <ul id='lib-list' class="list-group"></ul>
+                </div>
+            </div>
+        </div> 
+        <div class="col-xs-8" id="box-wrap">
+            <br><h2>Add Books!</h2>
+            <h5>please fill in all before submitting</h5>
+            <h5>Left/Default ID should match Right/Recommendation ID.</h5>
+            <div class="col-xs-6">
+                <h4>If these ... </h4>
+                <form id="defaultBooks" method="post" action="" class="container col-centered">
+                <div class="form-group" style="text-align:left">
+                    <div>
+                        <label class="control-label" style="text-align:left;"> Book 1: </label>
+                        <input type="text" class="form-control" name="bookTitle1" id="defTitle1" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor1" id="defAuthor1" placeholder="Author"> 
+                        <input type="text" class="form-control" name="def_id_num1" id="def_id_num1" placeholder="ID"> 
+                        <select name="Genre" id="defGenre1" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                        </select> 
+                    </div>
+                    <div>
+                         <br>
+                        <label class="control-label" style="text-align:left;"> Book 2: </label>
+                        <input type="text" class="form-control" name="bookTitle2" id="defTitle2" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor2" id="defAuthor2" placeholder="Author"> 
+                        <input type="text" class="form-control" name="def_id_num2" id="def_id_num2" placeholder="ID"> 
+                        <select name="Genre" id="defGenre2" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                        </select> 
+                    </div>
+                    <div>
+                        <br>
+                        <label class="control-label" style="text-align:left;"> Book 3: </label>
+                        <input type="text" class="form-control" name="bookTitle3" id="defTitle3" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor3" id="defAuthor3" placeholder="Author"> 
+                        <input type="text" class="form-control" name="def_id_num3" id="def_id_num3" placeholder="ID"> 
+                        <select name="Genre" id="defGenre3" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                        </select> 
+                    </div>                
+                </div>
+            </form>
+            </div>
+            <div class="col-xs-6">
+                <h4>then these! </h4>
+                <form id="suggestionBooks" method="post" action="" class="container col-centered">
+                <div class="form-group" style="text-align:left">
+                    <div>
+                    <label class="control-label" style="text-align:left;"> Book 1: </label>
+                        <input type="text" class="form-control" name="bookTitle1" id="sugTitle1" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor1" id="sugAuthor1" placeholder="Author"> 
+                        <input type="text" class="form-control" name="sug_id_num1" id="sug_id_num1" placeholder="ID"> 
+                        <select name="Genre" id="sugGenre1" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                            <option value="poetry">Poetry</option>
+                        </select> 
+                    </div>
+                    <div>
+                    <br>
+                    <label class="control-label" style="text-align:left;"> Book 2: </label>
+                        <input type="text" class="form-control" name="bookTitle2" id="sugTitle2" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor2" id="sugAuthor2" placeholder="Author"> 
+                        <input type="text" class="form-control" name="sug_id_num2" id="sug_id_num2" placeholder="ID">                          
+                        <select name="Genre" id="sugGenre2" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                            <option value="poetry">Poetry</option>
+                        </select> 
+                    </div>
+                    <div>
+                    <br>
+                    <label class="control-label" style="text-align:left;"> Book 3: </label>
+                        <input type="text" class="form-control" name="bookTitle3" id="sugTitle3" placeholder="Book Title">
+                        <input type="text" class="form-control" name="bookAuthor3" id="sugAuthor3" placeholder="Author"> 
+                        <input type="text" class="form-control" name="sug_id_num3" id="sug_id_num3" placeholder="ID">                         
+                        <select name="Genre" id="sugGenre3" class="form-control">
+                            <option value="none">Genre</option>
+                            <option value="nonfiction">Non-Fiction</option>
+                            <option value="horror">Horror</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="scifi">Science Fiction</option>
+                            <option value="drama">Drama</option>
+                            <option value="poetry">Poetry</option>
+                        </select> 
+                    </div>                
+                </div>
+            </form>
+            </div>
+            <div>
+                <label class="control-label"></label>
+                <input type="hidden" name="slugLib" value={{slug}} >
+                <input type="submit" name="addBtn" id="addBtn" class="form-control" onsubmit="clearForm(this)" value="submit">
+            </div>
+        </div>
+    </div>
+</div>
+
