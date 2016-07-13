@@ -40,4 +40,10 @@ mongoose.model('User', User);
 mongoose.model('Book', Book);
 mongoose.model('Library', Library);
 
-mongoose.connect('mongodb://localhost/WSIRApp');
+var MONGOLAB_URI = 'mongodb://monica:supadupa1@ds023064.mlab.com:23064/what-book-should-i-read';
+
+
+mongoose.connect(process.env.MONGOLAB_URI, function (error) {
+    if (error) console.error(error);
+    else console.log('mongo connected');
+});
